@@ -1,0 +1,6 @@
+<launch>
+  <group ns="$(arg veh)"> 
+    <node pkg="colour-detector" type="colour-detector.py" name="colour_detector_red" output="screen" args="$(arg veh) red"/>
+    <remap from="~/colour_detector/" to="/$(arg veh)/colour_detector_red/"/>
+  </group>
+</launch>
